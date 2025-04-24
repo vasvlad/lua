@@ -74,6 +74,7 @@ This package contains development files for %{name}.
 chmod u+x autogen.sh config.guess config.sub configure depcomp install-sh missing
 # << build pre
 
+export CFLAGS="$RPM_OPT_FLAGS -fPIC"
 %configure  \
     --without-readline
 
